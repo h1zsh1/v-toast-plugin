@@ -1,0 +1,102 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "v-toast-plugin",
+        "scope": null,
+        "escapedName": "v-toast-plugin",
+        "name": "v-toast-plugin",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/phf/code/demo/toast/toast"
+    ]
+  ],
+  "_cnpm_publish_time": 1503505345046,
+  "_from": "v-toast-plugin@latest",
+  "_id": "v-toast-plugin@1.0.3",
+  "_inCache": true,
+  "_location": "/v-toast-plugin",
+  "_nodeVersion": "7.10.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/v-toast-plugin-1.0.3.tgz_1503505344962_0.14776304713450372"
+  },
+  "_npmUser": {
+    "name": "zs1988",
+    "email": "zs1039650777@163.com"
+  },
+  "_npmVersion": "4.2.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "v-toast-plugin",
+    "scope": null,
+    "escapedName": "v-toast-plugin",
+    "name": "v-toast-plugin",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npm.taobao.org/v-toast-plugin/download/v-toast-plugin-1.0.3.tgz",
+  "_shasum": "fe4ee5fe18d8e289ccc328ecb54d496456102875",
+  "_shrinkwrap": null,
+  "_spec": "v-toast-plugin",
+  "_where": "/Users/phf/code/demo/toast/toast",
+  "author": {
+    "name": "zs1988"
+  },
+  "bugs": {
+    "url": "https://github.com/h1zsh1/v-toast-plugin/issues"
+  },
+  "dependencies": {
+    "vue": "^2.3.3"
+  },
+  "description": "vue plugin",
+  "devDependencies": {
+    "babel-core": "^6.0.0",
+    "babel-loader": "^6.0.0",
+    "babel-preset-env": "^1.5.1",
+    "cross-env": "^3.0.0",
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^5.0.1",
+    "vue-loader": "^12.1.0",
+    "vue-template-compiler": "^2.3.3",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "fe4ee5fe18d8e289ccc328ecb54d496456102875",
+    "size": 32713,
+    "noattachment": false,
+    "tarball": "http://registry.npm.taobao.org/v-toast-plugin/download/v-toast-plugin-1.0.3.tgz"
+  },
+  "homepage": "https://github.com/h1zsh1/v-toast-plugin#readme",
+  "main": "dist/v-toast-plugin.js",
+  "maintainers": [
+    {
+      "name": "zs1988",
+      "email": "zs1039650777@163.com"
+    }
+  ],
+  "name": "v-toast-plugin",
+  "optionalDependencies": {},
+  "private": false,
+  "publish_time": 1503505345046,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/h1zsh1/v-toast-plugin.git"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot"
+  },
+  "version": "1.0.3"
+}
