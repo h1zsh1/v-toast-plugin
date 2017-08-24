@@ -7,8 +7,8 @@
       </div>
       <div class="alert-modal-body">{{propsData.msg}}</div>
       <div class="alert-footer" v-if="propsData.type === 2">
-        <div class="btn-c" @click="_close">取消</div>
-        <div class="btn-d" @click="_doThing">确定</div>
+        <div class="btn-c" @click="_abolish">取消</div>
+        <div class="btn-d" @click="_confirm">确定</div>
       </div>
     </div>
   </div>
@@ -24,9 +24,15 @@
       this.stopScroll()
     },
     methods: {
-      _doThing () {
+      _confirm () {
         if (this.emitConfirm) {
           this.emitConfirm()
+        }
+        this._close()
+      },
+      _abolish () {
+        if (this.emitAbolish) {
+          this.emitAbolish()
         }
         this._close()
       },
