@@ -73,7 +73,6 @@ this.$Toast('200', 2, '一旦确认，数据不可恢复[title:]警告').then(re
 
 ```
 
-这里有一个完整的demo [demo](http://vuejs.github.io/vue-loader).
 
 ## config配置对象
 

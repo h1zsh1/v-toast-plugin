@@ -9,10 +9,10 @@
       </div>
       <div class="alert-modal-body">{{propsData.msg}}</div>
       <div class="alert-footer" v-if="propsData.type === 2">
-        <div class="btn-c btn-style" @click="_abolish">取消</div>
-        <div class="btn-d btn-style" @click="_confirm">确定</div>
+        <div class="btn-c btn-style" @click.self.stop="_abolish">取消</div>
+        <div class="btn-d btn-style" @click.self.stop="_confirm">确定</div>
       </div>
-      <div class="close close-m icon-close" @click="_close">
+      <div class="close close-m icon-close" @click.stop="_close">
         <?xml version="1.0" encoding="UTF-8"?>
         <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
@@ -92,107 +92,115 @@
   }
 </script>
 <style lang="scss" rel="stylesheet/scss" scoped>
-.box-background-color{
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.alert-modal-wrapper{
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  @keyframes myAnimate
-  {
-    from {padding-top: 0; opacity: 0;}
-    to {tpadding-top: 61px; opacity: 1;}
+  .box-background-color{
+    background-color: rgba(0, 0, 0, 0.5);
   }
-  .text-box-wrapper{
-    align-self: flex-start;
-    padding-top: 61px;
-    opacity: 1;
-    animation: myAnimate .3s;
-    .text-box{
-      min-width: 336px;
-      height: 40px;
-      line-height: 40px;
-      text-align: center;
-      border-radius: 3px;
-      font-size: 16px;
-      color: #fff;
-      background: #05a09d;
-      box-shadow: 0 6px 8px rgba(0, 128, 125, 0.2);
-    }
-    .text-box-error{
-      color: #FE3B2F;
-      background: #fff;
-      border: 1px solid rgba(254, 59, 47, 0.4);
-      box-shadow: 0 6px 8px rgba(254, 59, 47, 0.2);
-    }
-  }
-  .alert-modal-container{
-    background-color: #fff;
-    position: relative;
-    border-radius: 3px;
-    box-sizing: border-box;
-    width: 420px;
-    padding: 40px 20px 30px;
-    .close{
-      font-size: 0;
-      position: absolute;
-      right: -32px;
-      top: 0;
-      cursor: pointer;
-    }
-    .alert-modal-header{
-      text-align: center;
-      font-size: 20px;
-      color: #000;
-      font-weight: bold;
-    }
-    .alert-modal-body{
-      line-height: 1.5;
-      color: #333;
-      font-size: 18px;
-      padding: 30px 0;
-      text-align: center;
-    }
-  }
-  .alert-footer{
+  .alert-modal-wrapper{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     display: flex;
-    .btn-style{
-      width: 182px;
-      font-size: 16px;
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-      height: 38px;
-      line-height: 38px;
-      text-align: center;
-      border-radius: 2px;
-      cursor: pointer;
-      user-select: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    @keyframes myAnimate
+    {
+      from {padding-top: 0; opacity: 0;}
+      to {tpadding-top: 61px; opacity: 1;}
     }
-    .btn-c{
-      color: #999;
-      border: 1px solid #e1e1e1;
-      background: transparent;
-      margin-right: 16px;
-      &:hover{
-        opacity: .8;
+    .text-box-wrapper{
+      align-self: flex-start;
+      padding-top: 61px;
+      opacity: 1;
+      animation: myAnimate .3s;
+      .text-box{
+        min-width: 336px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 3px;
+        font-size: 16px;
+        color: #fff;
+        background: #05a09d;
+        box-shadow: 0 6px 8px rgba(0, 128, 125, 0.2);
+      }
+      .text-box-error{
+        color: #FE3B2F;
+        background: #fff;
+        border: 1px solid rgba(254, 59, 47, 0.4);
+        box-shadow: 0 6px 8px rgba(254, 59, 47, 0.2);
       }
     }
-    .btn-d{
-      color: #fff;
-      border: none;
-      background: #00807d;
-      &:hover{
-        opacity: .8;
+    .alert-modal-container{
+      background-color: #fff;
+      position: relative;
+      border-radius: 3px;
+      box-sizing: border-box;
+      width: 420px;
+      padding: 40px 20px 30px;
+      .close{
+        font-size: 0;
+        position: absolute;
+        right: -32px;
+        top: 0;
+        cursor: pointer;
+      }
+      .alert-modal-header{
+        text-align: center;
+        font-size: 20px;
+        color: #000;
+        font-weight: bold;
+      }
+      .alert-modal-body{
+        line-height: 1.5;
+        color: #333;
+        font-size: 18px;
+        padding: 30px 0;
+        text-align: center;
+      }
+    }
+    .alert-footer{
+      display: flex;
+      .btn-style{
+        width: 182px;
+        font-size: 16px;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        height: 38px;
+        line-height: 38px;
+        text-align: center;
+        border-radius: 2px;
+        cursor: pointer;
+        user-select: none;
+      }
+      .btn-c{
+        color: #999;
+        border: 1px solid #e1e1e1;
+        background: transparent;
+        margin-right: 16px;
+        &:hover{
+          opacity: .8;
+        }
+      }
+      .btn-d{
+        color: #fff;
+        border: none;
+        background: #00807d;
+        &:hover{
+          opacity: .8;
+        }
       }
     }
   }
-}
+  @media screen and (max-width: 640px) {
+    .alert-modal-wrapper{
+      .alert-modal-container{
+        width: 300px;
+        padding: 20px 10px 20px;
+      }
+    }
+  }
 </style>
