@@ -72,7 +72,7 @@ this.$Toast('200', 2, '一旦确认，数据不可恢复[title:]警告').then(re
 工程目录src/myToast.vue可供参考
 
 ```
-
+这有个例子 [demo for v-toast-plugin](https://h1zsh1.github.io/demo-pages/#/).
 
 ## config配置对象
 
